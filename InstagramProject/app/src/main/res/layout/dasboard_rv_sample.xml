@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImg"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            android:layout_marginTop="@dimen/_8mdp"
+            android:layout_marginEnd="@dimen/_16mdp"
+            android:padding="6dp"
+            android:src="@drawable/cartoon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/statusCircle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/orange_circle_1"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImg"
+            app:layout_constraintEnd_toEndOf="@+id/profileImg"
+            app:layout_constraintStart_toStartOf="@+id/profileImg"
+            app:layout_constraintTop_toTopOf="@+id/profileImg" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8mdp"
+            android:text="@string/vishnu"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20mdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/statusCircle"
+            app:layout_constraintBottom_toTopOf="@+id/profession"
+            app:layout_constraintStart_toEndOf="@+id/statusCircle"
+            app:layout_constraintTop_toTopOf="@+id/statusCircle"
+            app:layout_constraintVertical_bias="0.19" />
+
+        <TextView
+            android:id="@+id/profession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="travellor"
+            android:textSize="@dimen/_14mdp"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="@dimen/_8mdp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profileImg" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/postImg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_150mdp"
+
+            android:layout_marginTop="@dimen/_16mdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cartoon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImg"
+            app:riv_corner_radius="12dip"
+            app:riv_mutate_background="true" />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_16mdp"
+            android:layout_marginRight="@dimen/_16mdp"
+            android:src="@drawable/ic_bookmark"
+            app:layout_constraintEnd_toEndOf="@+id/postImg"
+            app:layout_constraintTop_toBottomOf="@+id/profileImg" />
+
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/_16mdp"
+            android:layout_marginTop="@dimen/_16mdp"
+            android:drawableLeft="@drawable/ic_heart_black"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="354"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postImg" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/_16mdp"
+            android:layout_marginTop="@dimen/_16mdp"
+            android:drawableLeft="@drawable/ic_comment_profile"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="354"
+            app:layout_constraintStart_toEndOf="@+id/like"
+            app:layout_constraintTop_toBottomOf="@+id/postImg" />
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/_16mdp"
+            android:layout_marginTop="@dimen/_16mdp"
+            android:drawableLeft="@drawable/ic_share"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="354"
+            app:layout_constraintStart_toEndOf="@+id/comment"
+            app:layout_constraintTop_toBottomOf="@+id/postImg" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="hello i am description"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postImg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

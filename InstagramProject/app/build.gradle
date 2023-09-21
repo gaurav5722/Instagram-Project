@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -34,11 +35,32 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-auth:22.1.1'
+    implementation 'com.google.firebase:firebase-database:20.2.2'
+    implementation 'com.google.firebase:firebase-storage:20.2.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.github.iammert:ReadableBottomBar:0.2'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
     implementation 'com.github.MrNouri:DynamicSizes:1.0'
+    implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
+
+    //Diagonal layout
+    implementation 'com.github.florent37:diagonallayout:1.0.7'
+
+    //Picaso implementation for image download
+    implementation 'com.squareup.picasso:picasso:2.8'
+    // dependency for time ago in android(so time comes like -few minutes ago)
+    implementation 'com.github.marlonlom:timeago:4.0.3'
+    // dependency for the circular status view
+    implementation 'com.github.3llomi:CircularStatusView:V1.0.3'
+    // dependecy for the status view
+    implementation 'com.github.OMARIHAMZA:StoryView:1.0.2-alpha'
+   // dependency of simmer effect is added so when the data is loaded than recycler view with no data is visible
+    implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
+    //in simmer effect the parent must be relative layout only and the child can be constraint layout
 }
+//use ctrl+alt+l to formate in android studio

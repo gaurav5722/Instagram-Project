@@ -7,4 +7,6 @@
     <string name="profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="vishnu">Vishnu shanker Sharma</string>
+    <string name="friendship_quote">A friend who understands your tears is much more valuable than a lot of friends who only know your smile</string>
 </resources>

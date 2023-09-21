@@ -10,4 +10,8 @@
     <color name="orange">#E8430F</color>
     <color name ="green">#0BC612</color>
     <color name = "gray">#80808080</color>
+    <color name= "grey_transparent">#47000000</color>
+    <color name="blue">#11DDCA</color>
+    <color name="red">#C30101</color>
+   <color name="light_green">#1A03F40D</color>
 </resources>

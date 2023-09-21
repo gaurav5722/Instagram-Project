@@ -1,14 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.AddFragment">
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tvCreatePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnPost"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPost"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:text="Create Post"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_black"/>
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/btnPost"
+    android:layout_width="75dp"
+    android:layout_height="40dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:text="Post"
+    android:background="@drawable/follow_active_btn"
+    android:textColor="@color/gray"
+    android:enabled="false"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"/>
+    <View
+        android:id="@+id/view9"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/btnPost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImg"
+        android:layout_width="@dimen/_60mdp"
+        android:layout_height="@dimen/_60mdp"
 
-</FrameLayout>
+        android:layout_marginTop="8dp"
+        android:src="@drawable/cartoon"
+       app:civ_border_color="@color/white"
+        app:civ_border_width="@dimen/_5mdp"
+        app:layout_constraintStart_toStartOf="@+id/tvCreatePost"
+        app:layout_constraintTop_toBottomOf="@id/view9"
+        app:layout_goneMarginTop="8dp"
+
+
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14font_mdp"
+        app:layout_constraintBottom_toTopOf="@+id/profession"
+       app:layout_constraintStart_toEndOf="@+id/profileImg"
+        app:layout_constraintTop_toTopOf="@+id/profileImg" />
+
+    <TextView
+        android:id="@+id/profession"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="profile"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImg"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+
+        />
+
+    <EditText
+        android:id="@+id/etPostDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:gravity="top"
+        android:hint="What's on your mind?"
+        android:textSize="@dimen/_24font_mdp"
+        app:layout_constraintBottom_toTopOf="@+id/ivPostImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profileImg"
+        app:layout_constraintTop_toBottomOf="@+id/profileImg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivAddImage"
+        android:layout_width="@dimen/_30mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:src="@drawable/ic_image1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAddImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivAddImage"
+        android:text="Add to your post"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:textSize="@dimen/_16mdp"
+        android:textColor="@color/black"/>
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ivAddImage"
+        android:layout_marginTop="8dp"/>
+        <ImageView
+            android:id="@+id/ivPostImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@drawable/hanuman_ji"
+            app:layout_constraintTop_toBottomOf="@+id/profileImg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/view10"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
